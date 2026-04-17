@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Изборни аномалии</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <div id="introOverlay">
+        <div class="intro-content">
+
+            <h1>Изборни <i>аномалии</i> в България</h1>
+
+            <p>
+                Интерактивна визуализация на резултати от изминали парламентарни избори в България,
+                която показва къде се открояват аномалии като
+                доминиращи партии, висока активност и невалидни гласове.
+            </p>
+
+            <button id="enterBtn">Разгледай</button>
+
+        </div>
+    </div>
+
+    <header id="mainHeader">
+        <div class="header-container">
+
+            <div class="logo">
+                Изборни <i>аномалии</i> в България
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Аномалии</a>
+                <a href="methodology.html" class="nav-link">Методология</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="controls">
+        <select id="anomaly"></select>
+        <select id="region"></select>
+        <select id="year"></select>
+    </div>
+
+    <svg id="chart"></svg>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup">✕</span>
+            <div id="info"></div>
+            <div id="chartWrapper">
+                <svg id="barChart"></svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="legend" class="legend">
+        <div id="legendHeader" class="legend-header">
+            Легенда
+        </div>
+
+        <div id="legendContent" class="legend-content">
+            <p class="legend-desc">
+                Цветовете представляват печелившата партия във всяка секция. <br> Цвят
+                на точката = печеливша партия в тази секция. Големина на точката = брой гласоподаватели.
+            </p>
+
+            <div id="legendItems"></div>
+        </div>
+    </div>
+
+    <!--<button id="downloadBtn">Изтегли графиката</button>-->
+
+
+    <script src="code.js"></script>
+</body>
+
+</html>

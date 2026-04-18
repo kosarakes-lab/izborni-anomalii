@@ -54,6 +54,11 @@ body {
     border-radius: 8px;
 }
 
+#enterBtn:hover {
+    padding: 12px 20px;
+    background: rgb(27, 27, 27);
+}
+
 
 /*HEADER*/
 
@@ -146,7 +151,7 @@ body {
 
 select {
     appearance: none;
-    padding: 10px 16px;
+    padding: 12px 18px;
     border-radius: 10px;
     border: 2px solid #000000;
     background: white;
@@ -157,7 +162,9 @@ select {
 }
 
 select:hover {
-    border-color: #aaa;
+    border: 3px solid #000000;
+    font-weight: 900;
+    background: #F8F8F8;
 }
 
 #chart {
